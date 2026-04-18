@@ -10,72 +10,47 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{
-  font-family:'Inter',sans-serif;
-  background:#020617;
-  color:#e5e7eb;
-  line-height:1.6;
-}
+body{font-family:'Inter',sans-serif;background:#020617;color:#e5e7eb;}
 
-/* NAV */
-nav{
+/* HEADER */
+header{
   display:flex;
   justify-content:space-between;
   padding:20px 40px;
+  background:#020617;
+  border-bottom:1px solid rgba(255,255,255,0.05);
 }
-nav h1{font-size:20px;}
-nav a{
-  color:#9ca3af;
-  text-decoration:none;
-}
+header h1{font-size:20px;}
+header a{color:#9ca3af;text-decoration:none;margin-left:20px;}
 
 /* HERO */
 .hero{
-  height:90vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
   text-align:center;
-  padding:20px;
+  padding:100px 20px;
 }
-.hero h2{
-  font-size:50px;
-  max-width:800px;
-}
+.hero h2{font-size:48px;}
 .hero span{
   background:linear-gradient(90deg,#3b82f6,#06b6d4);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
-.hero p{
-  margin-top:20px;
-  color:#9ca3af;
-  max-width:600px;
-}
+.hero p{margin-top:20px;color:#9ca3af;}
 .btn{
+  display:inline-block;
   margin-top:30px;
-  padding:14px 28px;
-  border-radius:10px;
+  padding:14px 26px;
   background:#3b82f6;
   color:white;
   text-decoration:none;
-  transition:0.3s;
-}
-.btn:hover{
-  background:#2563eb;
+  border-radius:8px;
 }
 
-/* SECTION */
+/* SECTIONS */
 .section{
-  padding:80px 20px;
+  padding:60px 20px;
   max-width:900px;
   margin:auto;
   text-align:center;
-}
-.section h3{
-  font-size:28px;
-  margin-bottom:20px;
 }
 .cards{
   display:grid;
@@ -86,19 +61,27 @@ nav a{
 .card{
   background:#0f172a;
   padding:25px;
-  border-radius:12px;
+  border-radius:10px;
 }
 
-/* CONTACT */
-.contact{
-  background:#0f172a;
-  padding:40px;
-  border-radius:15px;
-  margin-top:40px;
+/* CONTACT FORM */
+form{
+  margin-top:30px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
 }
-.contact p{
-  margin:10px 0;
-  font-size:16px;
+input,textarea{
+  padding:12px;
+  border:none;
+  border-radius:6px;
+}
+button{
+  padding:12px;
+  background:#3b82f6;
+  color:white;
+  border:none;
+  border-radius:6px;
 }
 
 /* FOOTER */
@@ -107,56 +90,75 @@ footer{
   padding:30px;
   color:#6b7280;
 }
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+}
 </style>
 </head>
 
 <body>
 
-<nav>
+<header>
   <h1>Tech Whisperer</h1>
-  <a href="mailto:shameermazharswe@gmail.com">Contact</a>
-</nav>
+  <div>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
 
 <section class="hero">
-  <h2>I help you solve <span>tech problems</span> — for free</h2>
-  <p>No charges. No stress. Just real support for devices, software, and everyday tech issues.</p>
-  <a href="mailto:shameermazharswe@gmail.com" class="btn">Get Help</a>
+  <h2>I fix your <span>tech problems</span> — for free</h2>
+  <p>No charges. Just real help.</p>
+  <a href="#contact" class="btn">Get Help</a>
 </section>
 
-<section class="section">
-  <h3>What I Help With</h3>
+<section id="services" class="section">
+  <h3>Services</h3>
   <div class="cards">
     <div class="card">Software Issues</div>
     <div class="card">Mobile & Laptop Problems</div>
-    <div class="card">Troubleshooting & Fixes</div>
+    <div class="card">Troubleshooting</div>
   </div>
 </section>
 
 <section class="section">
-  <h3>About Me</h3>
-  <p>
-    My name is Shameer Mazhar. I provide free tech support to anyone who needs help.
-    My goal is simple — help people without charging anything.
-  </p>
+  <h3>About</h3>
+  <p>I’m Shameer Mazhar. I help people solve tech problems for free.</p>
+</section>
 
-  <div class="contact">
-    <p>
-      <i class="fa-solid fa-envelope" style="margin-right:10px;color:#3b82f6;"></i>
-      shameermazharswe@gmail.com
-    </p>
+<section id="contact" class="section">
+  <h3>Contact Me</h3>
 
-    <p>
-      <i class="fa-solid fa-phone" style="margin-right:10px;color:#3b82f6;"></i>
-      +46764304528
-    </p>
+  <p><i class="fa-solid fa-envelope"></i> shameermazharswe@gmail.com</p>
+  <p><i class="fa-solid fa-phone"></i> +46764304528</p>
 
-    <p><strong>Role:</strong> Tech Support Specialist</p>
-  </div>
+  <!-- Contact Form (Email via Formspree) -->
+  <form action="https://formspree.io/f/YOUR-ID" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
 </section>
 
 <footer>
-  Helping people with technology — completely free.
+  © 2026 Shameer Mazhar — Free Tech Support
 </footer>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/46764304528" class="whatsapp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
