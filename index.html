@@ -17,7 +17,6 @@ header{
   display:flex;
   justify-content:space-between;
   padding:20px 40px;
-  background:#020617;
   border-bottom:1px solid rgba(255,255,255,0.05);
 }
 header h1{font-size:20px;}
@@ -28,11 +27,19 @@ header a{color:#9ca3af;text-decoration:none;margin-left:20px;}
   text-align:center;
   padding:100px 20px;
 }
-.hero h2{font-size:48px;}
+.hero h2{
+  font-size:44px;
+  line-height:1.3;
+}
 .hero span{
   background:linear-gradient(90deg,#3b82f6,#06b6d4);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
+}
+.name{
+  font-size:20px;
+  color:#94a3b8;
+  margin-bottom:20px;
 }
 .hero p{margin-top:20px;color:#9ca3af;}
 .btn{
@@ -64,7 +71,7 @@ header a{color:#9ca3af;text-decoration:none;margin-left:20px;}
   border-radius:10px;
 }
 
-/* CONTACT FORM */
+/* CONTACT */
 form{
   margin-top:30px;
   display:flex;
@@ -84,6 +91,10 @@ button{
   border-radius:6px;
 }
 
+.contact-info p{
+  margin:10px 0;
+}
+
 /* FOOTER */
 footer{
   text-align:center;
@@ -91,7 +102,7 @@ footer{
   color:#6b7280;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp{
   position:fixed;
   bottom:20px;
@@ -116,8 +127,14 @@ footer{
 </header>
 
 <section class="hero">
-  <h2>I fix your <span>tech problems</span> — for free</h2>
-  <p>No charges. Just real help.</p>
+  <div class="name">Shameer Mazhar</div>
+
+  <h2>
+    I help you solve <span>tech problems</span> — for free
+  </h2>
+
+  <p>No charges. No stress. Just real support.</p>
+
   <a href="#contact" class="btn">Get Help</a>
 </section>
 
@@ -132,16 +149,17 @@ footer{
 
 <section class="section">
   <h3>About</h3>
-  <p>I’m Shameer Mazhar. I help people solve tech problems for free.</p>
+  <p>I’m Shameer Mazhar. I help people solve tech problems completely free.</p>
 </section>
 
 <section id="contact" class="section">
   <h3>Contact Me</h3>
 
-  <p><i class="fa-solid fa-envelope"></i> shameermazharswe@gmail.com</p>
-  <p><i class="fa-solid fa-phone"></i> +46764304528</p>
+  <div class="contact-info">
+    <p><i class="fa-solid fa-envelope"></i> shameermazharswe@gmail.com</p>
+    <p><i class="fa-solid fa-phone"></i> +46764304528</p>
+  </div>
 
-  <!-- Contact Form (Email via Formspree) -->
   <form action="https://formspree.io/f/YOUR-ID" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
@@ -155,7 +173,6 @@ footer{
   © 2026 Shameer Mazhar — Free Tech Support
 </footer>
 
-<!-- WhatsApp Button -->
 <a href="https://wa.me/46764304528" class="whatsapp">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
