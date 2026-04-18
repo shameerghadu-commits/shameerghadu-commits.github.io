@@ -10,7 +10,7 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;background:#020617;color:#e5e7eb;}
+body{font-family:'Inter',sans-serif;background:#020617;color:#e5e7eb;scroll-behavior:smooth;}
 
 /* HEADER */
 header{
@@ -27,6 +27,11 @@ header a{color:#9ca3af;text-decoration:none;margin-left:20px;}
   text-align:center;
   padding:100px 20px;
 }
+.name{
+  font-size:20px;
+  color:#94a3b8;
+  margin-bottom:15px;
+}
 .hero h2{
   font-size:44px;
   line-height:1.3;
@@ -35,11 +40,6 @@ header a{color:#9ca3af;text-decoration:none;margin-left:20px;}
   background:linear-gradient(90deg,#3b82f6,#06b6d4);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-}
-.name{
-  font-size:20px;
-  color:#94a3b8;
-  margin-bottom:20px;
 }
 .hero p{margin-top:20px;color:#9ca3af;}
 .btn{
@@ -52,13 +52,19 @@ header a{color:#9ca3af;text-decoration:none;margin-left:20px;}
   border-radius:8px;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section{
-  padding:60px 20px;
+  padding:70px 20px;
   max-width:900px;
   margin:auto;
   text-align:center;
 }
+.section h3{
+  margin-bottom:20px;
+  font-size:28px;
+}
+
+/* CARDS */
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -72,8 +78,12 @@ header a{color:#9ca3af;text-decoration:none;margin-left:20px;}
 }
 
 /* CONTACT */
+.contact-info p{
+  margin:10px 0;
+}
+
 form{
-  margin-top:30px;
+  margin-top:25px;
   display:flex;
   flex-direction:column;
   gap:15px;
@@ -89,10 +99,6 @@ button{
   color:white;
   border:none;
   border-radius:6px;
-}
-
-.contact-info p{
-  margin:10px 0;
 }
 
 /* FOOTER */
@@ -121,8 +127,9 @@ footer{
 <header>
   <h1>Tech Whisperer</h1>
   <div>
-    <a href="#services">Services</a>
+    <a href="#about">About</a>
     <a href="#contact">Contact</a>
+    <a href="#services">Services</a>
   </div>
 </header>
 
@@ -135,23 +142,19 @@ footer{
 
   <p>No charges. No stress. Just real support.</p>
 
-  <a href="#contact" class="btn">Get Help</a>
+  <a href="#about" class="btn">Get Help</a>
 </section>
 
-<section id="services" class="section">
-  <h3>Services</h3>
-  <div class="cards">
-    <div class="card">Software Issues</div>
-    <div class="card">Mobile & Laptop Problems</div>
-    <div class="card">Troubleshooting</div>
-  </div>
-</section>
-
-<section class="section">
+<!-- ABOUT -->
+<section id="about" class="section">
   <h3>About</h3>
-  <p>I’m Shameer Mazhar. I help people solve tech problems completely free.</p>
+  <p>
+    I’m Shameer Mazhar. I provide free tech support to anyone who needs help.
+    My mission is simple — help people without charging anything.
+  </p>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
   <h3>Contact Me</h3>
 
@@ -166,7 +169,16 @@ footer{
     <textarea name="message" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
   </form>
+</section>
 
+<!-- SERVICES -->
+<section id="services" class="section">
+  <h3>Services</h3>
+  <div class="cards">
+    <div class="card">Software Issues</div>
+    <div class="card">Mobile & Laptop Problems</div>
+    <div class="card">Troubleshooting</div>
+  </div>
 </section>
 
 <footer>
