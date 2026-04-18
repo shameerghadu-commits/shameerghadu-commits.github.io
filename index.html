@@ -5,103 +5,130 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tech Whisperer | Shameer Mazhar</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+* {margin:0;padding:0;box-sizing:border-box;}
 body {
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:linear-gradient(135deg,#020617,#0f172a);
-  color:#e2e8f0;
+  font-family: 'Inter', sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* NAV */
+nav {
   display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+nav h1 {font-size:18px;}
+nav a {
+  text-decoration:none;
+  color:#9ca3af;
+}
+
+/* HERO */
+.hero {
+  height:90vh;
+  display:flex;
+  flex-direction:column;
   justify-content:center;
   align-items:center;
-  height:100vh;
-}
-
-.container {
   text-align:center;
-  max-width:500px;
-  padding:40px;
-  border-radius:20px;
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(12px);
-  box-shadow:0 20px 60px rgba(0,0,0,0.6);
-  animation:fadeIn 1.2s ease;
+  padding:20px;
 }
 
-h1 {
-  font-size:38px;
-  margin-bottom:5px;
+.hero h2 {
+  font-size:48px;
+  max-width:800px;
 }
 
-.role {
-  color:#38bdf8;
-  margin-bottom:20px;
-  font-size:16px;
+.hero span {
+  background:linear-gradient(90deg,#3b82f6,#06b6d4);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-.tagline {
-  color:#94a3b8;
-  margin-bottom:30px;
-}
-
-.contact p {
-  margin:6px 0;
+.hero p {
+  margin-top:20px;
+  color:#9ca3af;
+  font-size:18px;
+  max-width:600px;
 }
 
 .btn {
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 22px;
+  margin-top:30px;
+  padding:14px 26px;
   border-radius:10px;
-  text-decoration:none;
-  color:white;
   background:linear-gradient(135deg,#3b82f6,#06b6d4);
+  color:white;
+  text-decoration:none;
   transition:0.3s;
 }
-
 .btn:hover {
-  transform:translateY(-2px);
+  transform:translateY(-3px);
   box-shadow:0 10px 25px rgba(59,130,246,0.4);
 }
 
-.footer {
-  margin-top:25px;
-  font-size:13px;
-  color:#64748b;
+/* CARD */
+.card {
+  max-width:500px;
+  margin:60px auto;
+  padding:30px;
+  background:#0f172a;
+  border-radius:15px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.5);
+  text-align:center;
 }
 
-@keyframes fadeIn {
-  from {opacity:0; transform:translateY(20px);}
-  to {opacity:1; transform:translateY(0);}
+.card h3 {margin-bottom:20px;}
+
+.card p {
+  margin:8px 0;
+  color:#cbd5f5;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+  color:#6b7280;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
+<nav>
   <h1>Tech Whisperer</h1>
-  <div class="role">Shameer Mazhar · Tech Support Specialist</div>
+  <a href="mailto:shameermazharswe@gmail.com">Contact</a>
+</nav>
 
-  <p class="tagline">
-    Free help with tech problems. No charges. Just honest support, always.
+<section class="hero">
+  <h2>
+    I help you fix your <span>tech problems</span> — for free
+  </h2>
+
+  <p>
+    No charges. No stress. Just real support for devices, software, and everyday tech issues.
   </p>
 
-  <div class="contact">
-    <p><strong>Email:</strong> shameermazharswe@gmail.com</p>
-    <p><strong>Phone / WhatsApp:</strong> +46764304528</p>
-  </div>
+  <a href="mailto:shameermazharswe@gmail.com" class="btn">Get Help</a>
+</section>
 
-  <a href="mailto:shameermazharswe@gmail.com" class="btn">Contact Me</a>
-
-  <div class="footer">
-    Helping with devices, software, troubleshooting & everyday tech — completely free.
-  </div>
-
+<div class="card">
+  <h3>Contact</h3>
+  <p><strong>Name:</strong> Shameer Mazhar</p>
+  <p><strong>Email:</strong> shameermazharswe@gmail.com</p>
+  <p><strong>Phone / WhatsApp:</strong> +46764304528</p>
+  <p><strong>Role:</strong> Tech Support Specialist</p>
 </div>
+
+<footer>
+  Helping people with technology — completely free.
+</footer>
 
 </body>
 </html>
